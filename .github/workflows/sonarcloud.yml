@@ -15,7 +15,7 @@ jobs:
           distribution: 'zulu'
     - name: change file permission to make executable
       run: chmod u+x ~/work/Sonarqube-demo-new/Sonarqube-demo-new/mvnw
-    - name: Analyze with SonarCloud
+    - name: Analyze withh SonarCloud
       run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=makarandsolke_sonarcloud-demo -Dsonar.organization=makarandsolke -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
