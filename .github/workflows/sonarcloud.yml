@@ -13,6 +13,8 @@ jobs:
       with:
           java-version: 17
           distribution: 'zulu'
+    - name: check file permission
+      run: ls -lrt ~
     - name: Analyze with SonarCloud
       run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=makarandsolke_sonarcloud-demo -Dsonar.organization=makarandsolke -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
       env:
