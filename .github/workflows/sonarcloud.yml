@@ -16,7 +16,7 @@ jobs:
       with:
           java-version: 17
           distribution: 'zulu'
-    - name: change file permissionn to make executable
+    - name: change file permission to make executables
       run: chmod u+x ~/work/Sonarqube-demo-new/Sonarqube-demo-new/mvnw
     - name: Analyze withh SonarCloud
       run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=makarandsolke_sonarcloud-demo -Dsonar.organization=makarandsolke -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
